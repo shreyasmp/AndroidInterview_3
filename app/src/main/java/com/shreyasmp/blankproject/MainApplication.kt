@@ -1,10 +1,10 @@
 package com.shreyasmp.blankproject
 
 import android.app.Application
-import com.shreyasmp.blankproject.modules.apiModule
-import com.shreyasmp.blankproject.modules.networkModule
-import com.shreyasmp.blankproject.modules.repositoryModule
-import com.shreyasmp.blankproject.modules.viewModelModule
+import com.shreyasmp.blankproject.di.apiModule
+import com.shreyasmp.blankproject.di.networkModule
+import com.shreyasmp.blankproject.di.repositoryModule
+import com.shreyasmp.blankproject.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin

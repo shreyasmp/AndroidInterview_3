@@ -10,10 +10,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class InstrumentViewModel(private val repository: InstrumentRepository): ViewModel() {
+class InstrumentViewModel(private val repository: InstrumentRepository) : ViewModel() {
 
     private val _instrumentList: MutableLiveData<List<InstrumentModel>> = MutableLiveData()
-    val instrumentList : LiveData<List<InstrumentModel>> = _instrumentList
+    val instrumentList: LiveData<List<InstrumentModel>> = _instrumentList
 
     init {
         fetchInstrumentList()
@@ -28,5 +28,4 @@ class InstrumentViewModel(private val repository: InstrumentRepository): ViewMod
             _instrumentList.value = result?.value
         }
     }
-
 }

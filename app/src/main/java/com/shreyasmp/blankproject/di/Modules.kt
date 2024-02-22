@@ -1,10 +1,10 @@
-package com.shreyasmp.blankproject.modules
+package com.shreyasmp.blankproject.di
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.shreyasmp.blankproject.viewmodel.InstrumentViewModel
 import com.shreyasmp.blankproject.respository.InstrumentRepository
 import com.shreyasmp.blankproject.respository.InstrumentRepositoryImpl
 import com.shreyasmp.blankproject.service.Service
+import com.shreyasmp.blankproject.viewmodel.InstrumentViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel

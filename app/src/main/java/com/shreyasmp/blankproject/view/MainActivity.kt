@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.shreyasmp.blankproject.model.InstrumentModel
 import com.shreyasmp.blankproject.ui.theme.BlankProjectTheme
 import com.shreyasmp.blankproject.viewmodel.InstrumentViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -85,11 +86,17 @@ fun SearchViewBar(viewModel: InstrumentViewModel) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+
+            var filteredList = listOf<InstrumentModel>()
+
             instList?.let {
-                items(it) { instrument ->
-                    instrument.name?.let { name ->
-                        Text(text = name)
-                    }
+                filteredList = it.filter { instrument ->
+                    instrument.instrument_type == textFieldValue.text
+                }
+            }
+            items(filteredList) { instrument ->
+                instrument.name?.let { name ->
+                    Text(text = name)
                 }
             }
         }

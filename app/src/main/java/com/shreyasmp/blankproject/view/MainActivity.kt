@@ -50,14 +50,6 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Composable
 fun SearchViewBar(viewModel: InstrumentViewModel) {
 
     var textFieldValue by remember {
@@ -107,6 +99,6 @@ fun SearchViewBar(viewModel: InstrumentViewModel) {
 @Composable
 fun GreetingPreview() {
     BlankProjectTheme {
-        Greeting("Android")
+
     }
 }

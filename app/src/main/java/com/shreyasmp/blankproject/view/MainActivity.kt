@@ -59,7 +59,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun SearchViewBar(viewModel: InstrumentViewModel) {
 
-    var texxtFieldValue by remember {
+    var textFieldValue by remember {
         mutableStateOf(TextFieldValue(""))
     }
     val instList by viewModel.instrumentList.observeAsState()
@@ -70,8 +70,8 @@ fun SearchViewBar(viewModel: InstrumentViewModel) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        TextField(value = texxtFieldValue, onValueChange = { newValue ->
-            texxtFieldValue = newValue
+        TextField(value = textFieldValue, onValueChange = { newValue ->
+            textFieldValue = newValue
         },
             maxLines = 1,
             placeholder = {
